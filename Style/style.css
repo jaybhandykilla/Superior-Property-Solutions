@@ -45,8 +45,8 @@ body {
 
 .review-text {
     margin-top: 15px;
-    font-size: 1;
-    color: #333;
+    font-size: 1em;
+    color:#333000; 
 }
 
 .review-date {
@@ -78,7 +78,7 @@ body {
 button {
     background-color: white;
     border-radius: 5px;
-    color: 333;
+    color: #333000;
     padding: 20px 40px;
     text-align: center;
     text-decoration: none;
@@ -152,9 +152,10 @@ h1 {
 }
 
 
-.img-card{
-    display:inline;
+.img-card {
+    display: inline;
 }
-.home-paragraph{
+
+.home-paragraph {
     padding-left: 100px;
 }
