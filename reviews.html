@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,284 +10,330 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="icon" type="image/x-icon" href="spplogo.png">
 </head>
+
 <body>
-    <h1>Superior Property Solutions</h1>
-    <ul class="navbar">
-        <li class="homebutton"><a href="index.html"><img src="spplogo.png" id="logo"></a></li>
-        <li class="nav"><a href="reviews.html">Reviews</a></li>
-        <li class="nav"><a href="pictures.html">Pictures</a></li>
-        <li class="nav"><a href="contacts.html">Contacts</a></li>
-        <li class="nav"><a href="form.html">Form</a></li>
-        <li class="nav"><a href="certifications.html">Certifications</a></li>
-        <li class="nav search-container">
-            <form action="javascript:void(0)" onsubmit="searchSite()">
-                <input type="text" class="search-bar" placeholder="Search..." name="search" id="searchInput">
-                <button type="submit" class="search-btn"><img src="searchbtn.png" height="30px" width="30px"></button>
-                <ul id="searchResults"></ul>
-            </form>
-        </li>
-    </ul>
-    <div class="review-form-box">
-    <form action="https://formsubmit.co/k.barreira325@montytech.net" method="POST" class="review-form">
-        <label for="fullname">Full Name:</label><br>
-        <input type="text" id="fullname" name="name" required>
+    <div class="background">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="spplogo.png" alt="Logo" width="50" class="d-inline-block align-text-top">
+
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="reviews.html">Reviews</a>
+                        <a class="nav-link active" href="pictures.html">Pictures</a>
+                        <a class="nav-link active" href="contacts.html">Contacts</a>
+                        <a class="nav-link active" href="form.html">Forms</a>
+                        <a class="nav-link active" href="certifications.html">Certifications</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <br>
-        <label for="town">Town/City</label><br>
-        <input type="town" id="town" name="town" required>
-        <p>Number of stars ★</p>
-        <input type="radio" id="stars" name="star" value="1" required>
-        <label for="star">1</label>
-        <input type="radio" id="stars" name="star" value="2" required>
-        <label for="star">2</label>
-        <input type="radio" id="stars" name="star" value="3" required>
-        <label for="star">3</label>
-        <input type="radio" id="stars" name="star" value="4" required>
-        <label for="star">4</label>
-        <input type="radio" id="stars" name="star" value="5" required>
-        <label for="star">5</label>
+        <h1>Reviews</h1>
+        <button type="radio"><a href="subreview.html" style="color:black; text-decoration:none">Submit a Review</a></button>
         <br>
-        <label for="Review">Review</label><br>
-        <input type="Review" id="Review" name="Review" required>
-        <br>
-        <br>
-        <button type="submit" id="btn">Submit</button>
-   </form>
-</div>
-<div class="card" style="width: 25%;">
-    <div class="card-body">
-      <div class="review-header d-flex justify-content-between align-items-center mb-3">
-        <div class="name font-weight-bold">Maurice H. Gardner, MA</div>
-        <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-      </div>
-      <div class="review-text mb-3">
-        <div class="review-box">
-          Very hard workers, very pleased with the work and the time frame.
-        </div>
-      </div>
-      <div class="review-date text-muted">
-        Reviewed on: November 3rd, 2024
-      </div>
-    </div>
-  </div>
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Charles S. Lunenburg, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Very conscientious in every detail of the project. They cleaned up after themselves every day. I would highly recommend them for any project.
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Maurice H. Gardner, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Very hard workers, very pleased with the work and the time frame.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 3rd, 2024
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: October 16th, 2024
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Nancy C. Fitchburg, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay is an enthusiastic, knowledgeable and professional individual who often offered to go out of his way to help us with ideas and solutions to make our new bathroom special. We give him a 10 out of 10 and unreservedly recommend him to anyone considering a home renovation project.
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Charles S. Lunenburg, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Very conscientious in every detail of the project. They cleaned up after themselves every
+                            day. I
+                            would highly recommend them for any project.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: October 16th, 2024
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: August 30th 2024
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Greg B. Lunenburg, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Friendly, prompt, very clean.
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Nancy C. Fitchburg, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay is an enthusiastic, knowledgeable and professional individual who often offered to go
+                            out of
+                            his way to help us with ideas and solutions to make our new bathroom special. We give him a
+                            10
+                            out of 10 and unreservedly recommend him to anyone considering a home renovation project.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: August 30th 2024
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: August 23rd 2024
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Karyn H. Pepperell, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    We hired Superior Property Solutions for our primary bath remodel. They were professional and prompt and very easy to work with. The team was well-organized, worked hard and cleaned up every day. Jay really went the extra mile to ensure that our vision was achieved. He has great attention to detail and it is clear that he takes great pride in his work!
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Greg B. Lunenburg, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Friendly, prompt, very clean.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: August 23rd 2024
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: October 6th, 2023
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">John B. Ashburnham, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay and his team were very professional. They arrived when they said they would. They were conscientious, using tarps, etc. to protect the other areas in the house. They even shoveled my driveway after a storm before they started work. I would hire him again without hesitation.
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Karyn H. Pepperell, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            We hired Superior Property Solutions for our primary bath remodel. They were professional
+                            and
+                            prompt and very easy to work with. The team was well-organized, worked hard and cleaned up
+                            every
+                            day. Jay really went the extra mile to ensure that our vision was achieved. He has great
+                            attention to detail and it is clear that he takes great pride in his work!
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: October 6th, 2023
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: January 30th, 2023
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Marie W. Chelmsford, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay was very professional from the start. Stuck to the quote he gave us. Showed up on time and completed the project in the amount of time he estimated. Would highly recommend him to anyone. We will hire him for our future projects. Thanks Jay! Great job to you and your partner that worked with you! Sincerely, Tom &amp; Marie
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">John B. Ashburnham, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay and his team were very professional. They arrived when they said they would. They were
+                            conscientious, using tarps, etc. to protect the other areas in the house. They even shoveled
+                            my
+                            driveway after a storm before they started work. I would hire him again without hesitation.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: January 30th, 2023
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: November 29th, 2022
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Dennis M. Port Charlotte, FL</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay was very helpful as my wife and I became the GC. He was very insightful as to decisions and implications as we worked through timelines and schedule impacts. He brought many suggestions that helped us and was able to re-use some components - saving us some dollars. Jay’s team was very efficient and always cleaned up the workspace after their daily activities. We’ve already passed on his card to our designer and have told friends about his work.
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Marie W. Chelmsford, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay was very professional from the start. Stuck to the quote he gave us. Showed up on time
+                            and
+                            completed the project in the amount of time he estimated. Would highly recommend him to
+                            anyone.
+                            We will hire him for our future projects. Thanks Jay! Great job to you and your partner that
+                            worked with you! Sincerely, Tom &amp; Marie
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 29th, 2022
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: November 28th, 2022
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Robert C. Leominster, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Ensured that the project outcome was what was expected from me.
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Dennis M. Port Charlotte, FL</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay was very helpful as my wife and I became the GC. He was very insightful as to decisions
+                            and
+                            implications as we worked through timelines and schedule impacts. He brought many
+                            suggestions
+                            that helped us and was able to re-use some components - saving us some dollars. Jay’s team
+                            was
+                            very efficient and always cleaned up the workspace after their daily activities. We’ve
+                            already
+                            passed on his card to our designer and have told friends about his work.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 28th, 2022
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: April 14th, 2022
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Sam M. Leominster, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay was on time to complete my project. Very friendly and helpful. I will certainly recommend Jay!
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Robert C. Leominster, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Ensured that the project outcome was what was expected from me.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: April 14th, 2022
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: January 6th, 2022
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Danielle M. Boxborough, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay came in at a time of need and felt our pain for our bathroom situation, a 5-month long headache. He made our bathroom a goal to have completed before the new year, and if it wasn't for him, we wouldn't have a completed bathroom. But thanks to Jay, our bathroom will be completed before the end of the year! Jay was willing to work with our budget and our schedule. He was also willing to let us finish the cosmetic things that we wanted to finish and did not push us to have him finish them for us. But in the end, we will be bringing him back to finish some cosmetic details. Jay is very thorough in his work and communicates with you every step of the way! Jay is very professional, and him and his team clean up after themselves as well!
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Sam M. Leominster, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay was on time to complete my project. Very friendly and helpful. I will certainly
+                            recommend
+                            Jay!
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: January 6th, 2022
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: December 14th, 2021
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Patricia L. Dedham, MA</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay was straightforward to work with. He worked for me on several home improvement projects and understood my vision, making great suggestions that, without cutting corners, saved me money in the end. He never left the work area a mess. I appreciated his respect for our home and time. I highly recommend him for any of your construction needs.
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Danielle M. Boxborough, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay came in at a time of need and felt our pain for our bathroom situation, a 5-month long
+                            headache. He made our bathroom a goal to have completed before the new year, and if it
+                            wasn't
+                            for him, we wouldn't have a completed bathroom. But thanks to Jay, our bathroom will be
+                            completed before the end of the year! Jay was willing to work with our budget and our
+                            schedule.
+                            He was also willing to let us finish the cosmetic things that we wanted to finish and did
+                            not
+                            push us to have him finish them for us. But in the end, we will be bringing him back to
+                            finish
+                            some cosmetic details. Jay is very thorough in his work and communicates with you every step
+                            of
+                            the way! Jay is very professional, and him and his team clean up after themselves as well!
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: December 14th, 2021
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: November 23rd, 2021
-            </div>
-        </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Terry D.</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Overall an excellent experience! Exceptional ability, good communication skills, and very timely!
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Patricia L. Dedham, MA</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay was straightforward to work with. He worked for me on several home improvement projects
+                            and
+                            understood my vision, making great suggestions that, without cutting corners, saved me money
+                            in
+                            the end. He never left the work area a mess. I appreciated his respect for our home and
+                            time. I
+                            highly recommend him for any of your construction needs.
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 23rd, 2021
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: November 18th, 2021
-            </div>
         </div>
-    </div>
-    
-    <div class="card" style="width: 25%;">
-        <div class="card-body">
-            <div class="review-header d-flex justify-content-between align-items-center mb-3">
-                <div class="name font-weight-bold">Dave B.</div>
-                <div class="star-rating text-warning">★★★★★ <div class="number-rating">5/5</div></div>
-            </div>
-            <div class="review-text mb-3">
-                <div class="review-box">
-                    Jay Barreira is very professional, and I am highly pleased with his work!
+        <div class="card-group">
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Terry D.</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Overall an excellent experience! Exceptional ability, good communication skills, and very
+                            timely!
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 18th, 2021
+                    </div>
                 </div>
             </div>
-            <div class="review-date text-muted">
-                Reviewed on: November 18th, 2021
+
+            <div class="card">
+                <div class="card-body">
+                    <div class="review-header d-flex justify-content-between align-items-center mb-3">
+                        <div class="name font-weight-bold">Dave B.</div>
+                        <div class="star-rating text-warning">★★★★★</div>
+                    </div>
+                    <div class="review-text mb-3">
+                        <div class="review-box">
+                            Jay Barreira is very professional, and I am highly pleased with his work!
+                        </div>
+                    </div>
+                    <div class="review-date text-muted">
+                        Reviewed on: November 18th, 2021
+                    </div>
+                </div>
             </div>
         </div>
+        <footer>This website was created by Kyle Barreira. &copy; Superior Property Solutions LLC</footer>
     </div>
 </body>
+
 </html>
