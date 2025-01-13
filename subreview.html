@@ -11,12 +11,12 @@
     <title>Superior Property Solutions</title>
 </head>
 
-<body>
-    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+<body class="background">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="spplogo.png" alt="Logo" width="50" class="d-inline-block align-text-top">
-
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,43 +24,57 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    <a class="nav-link active" href="reviews.html">Reviews</a>
-                    <a class="nav-link active" href="pictures.html">Pictures</a>
-                    <a class="nav-link active" href="certifications.html">Certifications</a>
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="reviews.html">Reviews</a>
+                    <a class="nav-link" href="pictures.html">Pictures</a>
+                    <a class="nav-link" href="certifications.html">Certifications</a>
                 </div>
             </div>
         </div>
     </nav>
-    <div class="background">
-        <div class="form-box">
+
+    <!-- Background section -->
+    <div class="background py-5">
+        <div class="container">
+            <h2 class="mb-4" style="color:black;">Leave a Review</h2>
             <form action="https://formsubmit.co/k.barreira325@montytech.net" method="POST" class="review-form">
-                <label for="fullname">Full Name:</label><br>
-                <input type="text" id="fullname" name="name" required>
-                <br>
-                <label for="town">Town/City</label><br>
-                <input type="town" id="town" name="town" required>
-                <p>Number of stars ★</p>
-                <input type="radio" id="stars" name="star" value="1" required>
-                <label for="star">1</label>
-                <input type="radio" id="stars" name="star" value="2" required>
-                <label for="star">2</label>
-                <input type="radio" id="stars" name="star" value="3" required>
-                <label for="star">3</label>
-                <input type="radio" id="stars" name="star" value="4" required>
-                <label for="star">4</label>
-                <input type="radio" id="stars" name="star" value="5" required>
-                <label for="star">5</label>
-                <br>
-                <label for="Review">Review</label><br>
-                <input type="Review" id="Review" name="Review" required>
-                <br>
-                <br>
-                <button type="submit" id="btn">Submit</button>
+                <div class="mb-3">
+                    <label for="fullname" class="form-label" style="color:black;">Full Name:</label>
+                    <input type="text" id="fullname" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="town" class="form-label" style="color:black;">Town/City:</label>
+                    <input type="text" id="town" name="town" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Number of stars <div style="display:inline; color:goldenrod;">★</div></label>
+                    <div>
+                        <input type="radio" id="star1" name="star" value="1" required>
+                        <label for="star1" style="color:black;">1</label>
+                        <input type="radio" id="star2" name="star" value="2" required>
+                        <label for="star2" style="color:black;">2</label>
+                        <input type="radio" id="star3" name="star" value="3" required>
+                        <label for="star3" style="color:black;">3</label>
+                        <input type="radio" id="star4" name="star" value="4" required>
+                        <label for="star4" style="color:black;">4</label>
+                        <input type="radio" id="star5" name="star" value="5" required>
+                        <label for="star5" style="color:black;">5</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="review" class="form-label" style="color:black;">Review:</label>
+                    <textarea id="review" name="Review" class="form-control" rows="4" required
+                        style="resize: none;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary"
+                    style="background-color:#A03232; border-color:#A03232;">Submit</button>
             </form>
         </div>
-        <footer>This website was created by Kyle Barreira. &copy; Superior Property Solutions LLC</footer>
     </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 fixed-bottom">
+        This website was created by Kyle Barreira. &copy; Superior Property Solutions LLC
+    </footer>
 </body>
 
 </html>

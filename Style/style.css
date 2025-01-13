@@ -65,14 +65,12 @@ body {
 .form-box {
     background-color: #A03232;
     margin-top: 40px;
-    width: 17%;
-    padding: 10px;
+    width: 100%;
     border: #333;
     border-style: solid;
     border-width: 5px;
     color: whitesmoke;
     border-radius: 8px;
-    margin-left: 42%;
 }
 
 button {
@@ -114,7 +112,6 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
     display: block;
 }
-
 /*Footer*/
 footer {
     margin-top: 10px;
@@ -145,10 +142,11 @@ h1 {
     text-align: center;
 }
 
-#img-slide {
-    width: 25%;
+.SlideStyle {
+    width: auto;
     border: solid;
     margin-left: 10%;
+    margin-right: 10%;
 }
 
 
@@ -158,4 +156,16 @@ h1 {
 
 .home-paragraph {
     padding-left: 100px;
+}
+
+#review, #town, #fullname {
+    border: none !important;
+    overflow: auto !important;
+    outline: none !important;
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+
+    resize: none !important; /*remove the resize handle on the bottom right*/
 }
