@@ -166,34 +166,92 @@
     </div>
 
     <!-- Contact Form Section -->
-    <div class="container mt-5">
-        <h2>Contact Us</h2>
-        <form action="https://formsubmit.co/k.barreira325@montytech.net" method="POST" class="row g-3">
-            <div class="col-md-6">
-                <label for="fullname" class="form-label">Full Name:</label>
-                <input type="text" id="fullname" name="name" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="email" class="form-label">Email Address:</label>
-                <input type="text" id="email" name="email" class="form-control" required>
-            </div>
-            <div class="col-12">
-                <label for="desc" class="form-label">Description of Service Needed:</label>
-                <input type="text" id="desc" name="desc" class="form-control" required>
-            </div>
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary"
-                    style="background-color:#A03232; border-color:#A03232;">Send</button>
-            </div>
-        </form>
-    </div>
+    <form method="POST" class="form-home" style="text-align:center; margin-left:25%; padding:5px; ">
+        <input type="hidden" name="access_key" value="5739c70c-db17-4975-aec3-7095390c43af">
 
+        <!-- Full Name And Email -->
+        <div class="col-md-6">
+            <label for="fullname" class="form-label">Full Name:</label>
+            <input type="text" name="name" id="fullname" class="form-control" required>
+            <label for="email" class="form-label">Email Address:</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+
+        <!-- Description of Service Needed -->
+        <div class="col-12">
+            <label for="desc" class="form-label">Description of Service Needed:</label>
+            <textarea name="desc" id="desc" class="form-control" required></textarea>
+        </div>
+
+        <!-- Bot Check -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+        <!-- Submit Button -->
+        <div class="col-12" style="padding:5px;">
+            <button type="submit" class="btn btn-primary"
+                style="background-color:#A03232; border-color:#A03232;">Send</button>
+        </div>
+
+        <!-- Result Message -->
+        <div id="result"></div>
+    </form>
+
+
+
+    <script>
+        const form = document.getElementById('form');
+        const result = document.getElementById('result');
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Please wait..."
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Form submitted successfully";
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 3000);
+                });
+        });
+    </script>
     <!-- Footer -->
-    <footer class="text-center py-3 mt-5">
-        <p>This website was created by Kyle Barreira. &copy; Superior Property Solutions LLC</p>
+    <footer class="bg-dark text-white text-center py-4">
+        This website was created by Kyle Barreira. &copy; Superior Property Solutions LLC
+        <br>
+        <br>
+        <div id="google_translate_element"></div>
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+            }
+        </script>
+        <script type="text/javascript"
+            src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     </footer>
-    </div>
-
 </body>
 
 </html>

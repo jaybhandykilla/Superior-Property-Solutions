@@ -112,6 +112,7 @@ button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
     display: block;
 }
+
 /*Footer*/
 footer {
     margin-top: 10px;
@@ -158,14 +159,12 @@ h1 {
     padding-left: 100px;
 }
 
-#review, #town, #fullname {
-    border: none !important;
-    overflow: auto !important;
-    outline: none !important;
+#review,
+#town,
+#fullname, #email, #desc {
+    resize: none;
+}
 
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
-
-    resize: none !important; /*remove the resize handle on the bottom right*/
+.form-home {
+    width: 50%;
 }
