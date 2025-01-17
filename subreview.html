@@ -37,38 +37,98 @@
     <div class="background py-5">
         <div class="container">
             <h2 class="mb-4" style="color:black;">Leave a Review</h2>
-            <form action="https://formsubmit.co/k.barreira325@montytech.net" method="POST" class="review-form">
-                <div class="mb-3">
-                    <label for="fullname" class="form-label" style="color:black;">Full Name:</label>
-                    <input type="text" id="fullname" name="name" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label for="town" class="form-label" style="color:black;">Town/City:</label>
-                    <input type="text" id="town" name="town" class="form-control" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Number of stars <div style="display:inline; color:goldenrod;">★</div></label>
-                    <div>
-                        <input type="radio" id="star1" name="star" value="1" required>
-                        <label for="star1" style="color:black;">1</label>
-                        <input type="radio" id="star2" name="star" value="2" required>
-                        <label for="star2" style="color:black;">2</label>
-                        <input type="radio" id="star3" name="star" value="3" required>
-                        <label for="star3" style="color:black;">3</label>
-                        <input type="radio" id="star4" name="star" value="4" required>
-                        <label for="star4" style="color:black;">4</label>
-                        <input type="radio" id="star5" name="star" value="5" required>
-                        <label for="star5" style="color:black;">5</label>
+            <form method="POST" class="form-home" style="text-align:center; margin-left:25%; padding:5px;">
+                <input type="hidden" name="access_key" value="5739c70c-db17-4975-aec3-7095390c43af">
+            
+                <div class="row">
+                    <!-- Full Name -->
+                    <div class="col-md-6">
+                        <label for="fullname" class="form-label">Full Name:</label>
+                        <input type="text" name="name" id="fullname" class="form-control" style="align-items: center;" required>
                     </div>
+            
+                    <!-- Town/City -->
+                    <div class="col-md-6">
+                        <label for="town" class="form-label">Town/City:</label>
+                        <input type="text" name="town" id="town" class="form-control" required>
+                    </div>
+            
+                    <!-- Number of Stars -->
+                    <div class="col-12 pt-3">
+                        <label class="form-label">Number of stars <div style="display:inline; color:goldenrod;">★</div></label>
+                        <div>
+                            <input type="radio" id="star1" name="star" value="1" required>
+                            <label for="star1" style="color:black;">1</label>
+                            <input type="radio" id="star2" name="star" value="2" required>
+                            <label for="star2" style="color:black;">2</label>
+                            <input type="radio" id="star3" name="star" value="3" required>
+                            <label for="star3" style="color:black;">3</label>
+                            <input type="radio" id="star4" name="star" value="4" required>
+                            <label for="star4" style="color:black;">4</label>
+                            <input type="radio" id="star5" name="star" value="5" required>
+                            <label for="star5" style="color:black;">5</label>
+                        </div>
+                    </div>
+            
+                    <!-- Review -->
+                    <div class="col-12 pt-3">
+                        <label for="review" class="form-label">Review:</label>
+                        <textarea name="Review" id="review" class="form-control" rows="4" required style="resize: none;"></textarea>
+                    </div>
+            
+                    <!-- Bot Check -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+                    <!-- Submit Button -->
+                    <div class="col-12" style="padding:5px;">
+                        <button type="submit" class="btn btn-primary" style="background-color:#A03232; border-color:#A03232;">Submit</button>
+                    </div>
+            
+                    <!-- Result Message -->
+                    <div id="result"></div>
                 </div>
-                <div class="mb-3">
-                    <label for="review" class="form-label" style="color:black;">Review:</label>
-                    <textarea id="review" name="Review" class="form-control" rows="4" required
-                        style="resize: none;"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary"
-                    style="background-color:#A03232; border-color:#A03232;">Submit</button>
             </form>
+            
+            <script>
+                const form = document.getElementById('form');
+                const result = document.getElementById('result');
+            
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const formData = new FormData(form);
+                    const object = Object.fromEntries(formData);
+                    const json = JSON.stringify(object);
+                    result.innerHTML = "Please wait..."
+            
+                    fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/json'
+                        },
+                        body: json
+                    })
+                        .then(async (response) => {
+                            let json = await response.json();
+                            if (response.status == 200) {
+                                result.innerHTML = "Form submitted successfully";
+                            } else {
+                                console.log(response);
+                                result.innerHTML = json.message;
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            result.innerHTML = "Something went wrong!";
+                        })
+                        .then(function () {
+                            form.reset();
+                            setTimeout(() => {
+                                result.style.display = "none";
+                            }, 3000);
+                        });
+                });
+            </script>
         </div>
     </div>
     <!-- Footer -->

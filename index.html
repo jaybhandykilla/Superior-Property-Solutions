@@ -169,31 +169,40 @@
     <form method="POST" class="form-home" style="text-align:center; margin-left:25%; padding:5px; ">
         <input type="hidden" name="access_key" value="5739c70c-db17-4975-aec3-7095390c43af">
 
-        <!-- Full Name And Email -->
-        <div class="col-md-6">
-            <label for="fullname" class="form-label">Full Name:</label>
-            <input type="text" name="name" id="fullname" class="form-control" required>
-            <label for="email" class="form-label">Email Address:</label>
-            <input type="email" name="email" id="email" class="form-control" required>
+        <div class="row">
+            <!-- Full Name -->
+            <div class="col-md-6">
+                <label for="fullname" class="form-label">Full Name:</label>
+                <input type="text" name="name" id="fullname" class="form-control" style="align-items: center;" required>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" name="email" id="email" class="form-control" required>
+            </div>
+
+            <!-- Description of Service Needed -->
+            <div class="col-12 pt-3">
+                <label for="desc" class="form-label">Description of Service Needed:</label>
+                <textarea name="desc" id="desc" class="form-control" required></textarea>
+            </div>
+
+            <!-- Bot Check -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+            <!-- Submit Button -->
+            <div class="col-12" style="padding:5px;">
+                <button type="submit" class="btn btn-primary"
+                    style="background-color:#A03232; border-color:#A03232;">Send</button>
+            </div>
+
+            <!-- Result Message -->
+            <div id="result"></div>
         </div>
 
-        <!-- Description of Service Needed -->
-        <div class="col-12">
-            <label for="desc" class="form-label">Description of Service Needed:</label>
-            <textarea name="desc" id="desc" class="form-control" required></textarea>
-        </div>
 
-        <!-- Bot Check -->
-        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        <!-- Submit Button -->
-        <div class="col-12" style="padding:5px;">
-            <button type="submit" class="btn btn-primary"
-                style="background-color:#A03232; border-color:#A03232;">Send</button>
-        </div>
-
-        <!-- Result Message -->
-        <div id="result"></div>
     </form>
 
 

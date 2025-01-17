@@ -161,10 +161,13 @@ h1 {
 
 #review,
 #town,
-#fullname, #email, #desc {
+#fullname,
+#email,
+#desc {
     resize: none;
 }
 
 .form-home {
     width: 50%;
 }
+
